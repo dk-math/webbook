@@ -22,19 +22,23 @@ header {
 
 #headermenulist li {
     border-radius: 4px;
+    margin: 0 2em 0 2em;
+    padding: 0.1em 0.1em;
     display:flex;
     justify-content:center;
     align-items:center;
-}
-
-#headermenulist li a {
-    margin: 0 2em 0 2em;
     color: #666666;
     text-decoration: none;
+    cursor : pointer;
 }
 
 #headermenulist li:hover {
     background-color: #f3e2b6ff;
+}
+
+#headermenulist .active {
+    text-decoration: underline;
+    text-underline-offset: 0.5em;
 }
 
 #sitelogo {
@@ -55,6 +59,7 @@ header {
     box-shadow: 0.1em 0.1em 0.1em #666666;
     font-weight: bold;
     font-size: 1em;
+    cursor : pointer;
 }
 
 #somespace {
