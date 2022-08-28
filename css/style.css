@@ -1,0 +1,71 @@
+body {
+    margin: 0 0 0 0;
+    background-color: #f3e2b65f;
+}
+
+header {
+    margin: 2.5em 0 0 0;
+    font-size: 1.2em;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+#headermenulist {
+    margin: 0 5em 0 5em;
+    padding: 0 0 0 0;
+    display: flex;
+    list-style: none;
+}
+
+.headermenu {
+    margin: 0 2em 0 2em;
+    color: #666666;
+    text-decoration: none;
+}
+
+#sitelogo {
+    margin: 0 0 0 4em;
+    color: #0c1d49ff;
+}
+
+#login {
+    margin: 0 4em 0 0;
+    color: #ffffff;
+    text-align: center;
+    background-color: #0c1d49ff;
+    border-radius: 4px;
+    box-shadow: 0.1em 0.1em 0.1em #666666;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+#somespace {
+    height: 5em;
+    padding: 5em 0 0 0;
+}
+
+#topmessage {
+    height: 34em;
+    margin: 1em 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #0c1d49ff;
+}
+
+#topleft {
+    color: #ffffff;
+    padding: 0 0 0 5em;
+    font-weight: bold;
+}
+
+#toptitle {
+    font-size: 4.5em;
+    font-family: "Comic Sans MS";
+}
+
+#topimage {
+    height: 34em;
+}
