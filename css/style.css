@@ -20,10 +20,18 @@ header {
     list-style: none;
 }
 
-.headermenu {
+#headermenulist li {
+    border-radius: 4px;
+}
+
+#headermenulist li a {
     margin: 0 2em 0 2em;
     color: #666666;
     text-decoration: none;
+}
+
+#headermenulist li:hover {
+    background-color: #f3e2b6ff;
 }
 
 #sitelogo {
