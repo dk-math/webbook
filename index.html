@@ -11,26 +11,47 @@
   <body>
     <header>
         <div id="sitelogo">本好きのためのSNS</div>
-        <ul id="headermenulist">
-            <li id="top" class="tab active">トップ</li>
-            <li id="tweet" class="tab">本のつぶやき</li>
-            <li id="bookshelf" class="tab">みんなの本棚</li>
-            <li id="search" class="tab">自分に合った本を探す</li>
+        <ul class="tabs">
+            <li id="top" class="tab_item active">トップ</li>
+            <li id="tweet" class="tab_item">本のつぶやき</li>
+            <li id="bookshelf" class="tab_item">みんなの本棚</li>
+            <li id="search" class="tab_item">自分に合った本を探す</li>
         </ul>
+
         <button id="login">ログイン</button>
     </header>
 
     <div id="container">
-        <div id="somespace"></div>
-        <div id="topmessage">
-            <div id="topleft">
-                <p id="toptitle">Find<br>Yourself</p>
-                <p id="topcomment">People who like books and those who don't,<br>please feel free to use it.</p>
-            </div>
-            <div id="topright">
-                <img id="topimage" src="images/stackbooks.jpg" alt="トップ画像">
+        <div class="tab_content is-show" id="top_content">
+            <div id="somespace"></div>
+            <div id="topmessage">
+                <div id="topleft">
+                    <p id="toptitle">Find<br>Yourself</p>
+                    <p id="topcomment">People who like books and those who don't,<br>please feel free to use it.</p>
+                </div>
+
+                <div id="topright">
+                    <img id="topimage" src="images/stackbooks.jpg" alt="トップ画像">
+                </div>
             </div>
         </div>
+
+        <div class="tab_content" id="tweet_content">
+            <div id="somespace"></div>
+            <p class="c-txtsp">本のつぶやきの内容がここに入ります</p>
+        </div>
+
+        <div class="tab_content" id="bookshelf_content">
+            <div id="somespace"></div>
+            <p class="c-txtsp">みんなの本棚の内容がここに入ります</p>
+        </div>
+
+        <div class="tab_content" id="search_content">
+            <div id="somespace"></div>
+            <p class="c-txtsp">自分に合った本を探すの内容がここに入ります</p>
+        </div>
+    
+
     </div>
 
     <footer></footer>
