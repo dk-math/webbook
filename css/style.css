@@ -109,10 +109,10 @@ header {
     width: 20em;
 }
 
-#post {
+#post-btn {
     margin: 6.5em 4em 0 0;
     padding: 0 0 0 0.5em;
-    width: 5.5em;
+    width: 5.3em;
     position:fixed;
     right:0%;
     vertical-align: middle;
@@ -125,7 +125,7 @@ header {
 }
 
 #post-image {
-    margin: 0.15em 0.2em 0 0.1em;
+    margin: 0.15em 0 0 -0.2em;
     height: 0.8em;
 }
 
