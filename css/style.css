@@ -1,12 +1,14 @@
 body {
     margin: 0 0 0 0;
-    background-color: #f3e2b65f;
+    background-color: #fff8dc;
 }
 
 header {
-    margin: 2.5em 0 0 0;
+    padding: 2.5em 0 0 0;
     font-size: 1.2em;
     width: 100%;
+    background-color: #fff8dc;
+    z-index: 990;
     display: flex;
     position: fixed;
     justify-content: space-between;
@@ -20,7 +22,7 @@ header {
     list-style: none;
 }
 
-.tab_item {
+.tab-item {
     border-radius: 4px;
     margin: 0 2em 0 2em;
     padding: 0.1em 0.1em;
@@ -32,7 +34,7 @@ header {
     cursor : pointer;
 }
 
-.tab_item:hover {
+.tab-item:hover {
     background-color: #f3e2b6ff;
 }
 
@@ -41,17 +43,25 @@ header {
     text-underline-offset: 0.5em;
 }
 
-.tab_content {
+.tab-content {
     display: none;
     clear: both;
     overflow: hidden;
+}
+
+.some-space {
+    position: fixed;
+    height:11em;
+    width: 100%;
+    z-index: 99;
+    background-color: #fff8dc;
 }
 
 .is-show {
   display: block;
 }
 
-#sitelogo {
+#site-logo {
     margin: 0 0 0 4em;
     padding: 0.2em 0.2em;
     border-style: solid;
@@ -72,30 +82,59 @@ header {
     cursor : pointer;
 }
 
-#somespace {
-    height: 5em;
-    padding: 5em 0 0 0;
-}
-
-#topmessage {
+#top-message {
     height: 34em;
-    margin: 1em 0 0 0;
+    margin: 11em 0 0 0;
     display: flex;
     justify-content: space-between;
     background-color: #0c1d49ff;
 }
 
-#topleft {
+#top-left {
     color: #ffffff;
     padding: 0 0 0 5em;
     font-weight: bold;
 }
 
-#toptitle {
+#top-title {
     font-size: 4.5em;
     font-family: "Comic Sans MS";
 }
 
-#topimage {
+#top-image {
     height: 34em;
+}
+
+.post-left-block {
+    width: 20em;
+}
+
+#post {
+    margin: 6.5em 4em 0 0;
+    padding: 0 0 0 0.5em;
+    width: 5.5em;
+    position:fixed;
+    right:0%;
+    vertical-align: middle;
+    border-radius: 4px;
+    cursor : pointer;
+    font-size: 1.2em;
+    color: #666666;
+    font-weight: bold;
+    box-shadow: 0.1em 0.1em 0.1em #666666;
+}
+
+#post-image {
+    margin: 0.15em 0.2em 0 0.1em;
+    height: 0.8em;
+}
+
+#post:hover {
+    background-color: #f3e2b6ff;
+}
+
+#aaa {
+    margin-top: 11em;
+    height: 400em;
+    background-color: wheat;
 }
