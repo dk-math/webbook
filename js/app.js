@@ -1,28 +1,27 @@
-window.bookSite = {};
-bookSite.newsfeed = [];
+// (() => {
+//     window.bookSite = {};
+//     bookSite.cardList = [];
+//     // let username = localStorage.getItem("username");
+//     // if (!username) {
+//     //   username = window.prompt("What is your name?");
+//     //   localStorage.setItem("username", username);
+//     // }
+// })()
+window.addEventListener("load", () => {
+    window.bookSite = {};
+    bookSite.cardList = [];
+
+    let username = localStorage.getItem("username");
+    if (!username) {
+    username = window.prompt("What is your name?");
+    localStorage.setItem("username", username);
+    }
+
 
 const tabs = document.getElementsByClassName('tab-item');
 for(let i = 0; i < tabs.length; i++) {
     tabs[i].addEventListener('click', tabSwitch, false);
 }
-
-// document.getElementById("btn").addEventListener("click", () => {
-//     const newPost = {
-//       friend: username,
-//       text: document.getElementById("text-input").value,
-//       feeling: document.getElementById("feeling-select").value,
-//       image: "images/icon/my-icon.jpg",
-//       timestamp: "posted " + moment(Date()).fromNow(),
-//     };
-//     const friend = newPost.friend;
-//     bacefook.friends[friend] = [];
-//     bacefook.friends[friend].push(newPost);
-//     bacefook.newsfeed.push(newPost);
-//     post(bacefook.newsfeed.length - 1);
-
-//     document.getElementById("form").reset();
-//     feelSum();
-//   });
 
 function tabSwitch(){
     document.getElementsByClassName("active")[0].classList.remove("active");
@@ -33,22 +32,62 @@ function tabSwitch(){
     document.getElementsByClassName("tab-content")[index].classList.add('is-show');
 };
 
-const containerEl = document.querySelector("#tweet"); 
+document.getElementById("post-btn").addEventListener("click", () => {
+    const newPost = {
+        // userIcon: "images/post.jpg",
+        userName: username,
+        bookTitle: "",
+        // bookImg: "images/post.jpg",
+        // goodIcon: "images/post.jpg",
+        goodCount: 0,
+        time: "posted " + moment(Date()).fromNow(),
+    };
+    bookSite.cardList.push(newPost);
+    postCard(bookSite.cardList.length - 1);
+
+    // document.getElementById("form").reset();
+});
+
+const containerEl = document.querySelector("#aaa"); 
 function postCard(index) {
     const card = bookSite.cardList[index];
 
     const cardEl = document.createElement("div");
     cardEl.className = "card";
 
-    const iconEl = document.createElement("img");
-    iconEl.className = "icon"
-    iconEl.src = card.image;
-    cardEl.prepend(iconEl);
+    // const userIconEl = document.createElement("img");
+    // userIconEl.className = "user-icon"
+    // userIconEl.src = card.image;
+    // cardEl.prepend(userIconEl);
 
-    const nameEl = document.createElement("div");
-    nameEl.className = "name"
-    cardEl.prepend(nameEl);
+    const userNameEl = document.createElement("div");
+    userNameEl.className = "user-name"
+    userNameEl.innerHTML = username;
+    cardEl.prepend(userNameEl);
+
+    const bookTitleEl = document.createElement("div");
+    bookTitleEl.className = "book-title"
+    cardEl.prepend(bookTitleEl);
+
+    // const bookImgEl = document.createElement("img");
+    // bookImgEl.className = "book-image"
+    // bookImgEl.src = card.image;
+    // cardEl.prepend(bookImgEl);
+
+    // const goodIconEl = document.createElement("img");
+    // goodIconEl.className = "good-icon"
+    // goodIconEl.src = card.image;
+    // cardEl.prepend(goodIconEl);
+
+    const goodCountEl = document.createElement("div");
+    goodCountEl.className = "good-count"
+    cardEl.prepend(goodCountEl);
+
+    const timeEl = document.createElement("div");
+    timeEl.className = "time"
+    cardEl.prepend(timeEl);
 
     containerEl.prepend(cardEl);
-
 }
+
+})
