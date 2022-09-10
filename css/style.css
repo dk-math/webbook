@@ -1,14 +1,14 @@
 body {
     margin: 0 0 0 0;
-    background-color: #fff8dc;
+    background-color: #fdf5e6;
 }
 
 header {
     padding: 2.5em 0 0 0;
     font-size: 1.2em;
     width: 100%;
-    background-color: #fff8dc;
-    z-index: 990;
+    background-color: #fdf5e6;
+    z-index: 100;
     display: flex;
     position: fixed;
     justify-content: space-between;
@@ -54,7 +54,7 @@ header {
     height:11em;
     width: 100%;
     z-index: 99;
-    background-color: #fff8dc;
+    background-color: #fdf5e6;
 }
 
 .is-show {
@@ -129,8 +129,28 @@ header {
     background-color: #f3e2b6ff;
 }
 
-#aaa {
+/* #tweet-area {
+    justify-content: center;
+    margin: 11em auto;
+    display: table;
+} */
+
+#all-tweet {
     margin-top: 11em;
-    height: 400em;
-    background-color: wheat;
+    margin: 11em 3em 0 3em;
+    /* justify-content: center; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: space-between;
+    display: flex;
 }
+
+.card {
+    width: 18%;
+    height: 25%;
+    margin: 1em 1em;
+    padding: 1em 2em;
+    background-color: white;
+    border-radius: 1em;
+    box-shadow: 0.05em 0.05em grey;
+  }

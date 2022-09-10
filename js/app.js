@@ -1,12 +1,3 @@
-// (() => {
-//     window.bookSite = {};
-//     bookSite.cardList = [];
-//     // let username = localStorage.getItem("username");
-//     // if (!username) {
-//     //   username = window.prompt("What is your name?");
-//     //   localStorage.setItem("username", username);
-//     // }
-// })()
 window.addEventListener("load", () => {
     window.bookSite = {};
     bookSite.cardList = [];
@@ -16,7 +7,6 @@ window.addEventListener("load", () => {
     username = window.prompt("What is your name?");
     localStorage.setItem("username", username);
     }
-
 
 const tabs = document.getElementsByClassName('tab-item');
 for(let i = 0; i < tabs.length; i++) {
@@ -48,7 +38,7 @@ document.getElementById("post-btn").addEventListener("click", () => {
     // document.getElementById("form").reset();
 });
 
-const containerEl = document.querySelector("#aaa"); 
+const containerEl = document.querySelector("#all-tweet"); 
 function postCard(index) {
     const card = bookSite.cardList[index];
 
@@ -61,12 +51,12 @@ function postCard(index) {
     // cardEl.prepend(userIconEl);
 
     const userNameEl = document.createElement("div");
-    userNameEl.className = "user-name"
+    userNameEl.className = "user-name";
     userNameEl.innerHTML = username;
     cardEl.prepend(userNameEl);
 
     const bookTitleEl = document.createElement("div");
-    bookTitleEl.className = "book-title"
+    bookTitleEl.className = "book-title";
     cardEl.prepend(bookTitleEl);
 
     // const bookImgEl = document.createElement("img");
@@ -80,11 +70,11 @@ function postCard(index) {
     // cardEl.prepend(goodIconEl);
 
     const goodCountEl = document.createElement("div");
-    goodCountEl.className = "good-count"
+    goodCountEl.className = "good-count";
     cardEl.prepend(goodCountEl);
 
     const timeEl = document.createElement("div");
-    timeEl.className = "time"
+    timeEl.className = "time";
     cardEl.prepend(timeEl);
 
     containerEl.prepend(cardEl);
