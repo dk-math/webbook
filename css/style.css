@@ -159,6 +159,7 @@ header {
     margin: 1em 1em;
     padding: 1em 2em;
     background-color: white;
+    color: #666666;
     border-radius: 1em;
     box-shadow: 0.05em 0.05em grey;
   }
@@ -176,6 +177,7 @@ header {
     margin-top: 0.3em;
     height: 75%;
     border-bottom: solid;
+    border-color: #666666;
   }
 
   .card-book-image-block {

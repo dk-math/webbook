@@ -26,6 +26,7 @@ function tabSwitch(){
 
 document.getElementById("post-btn").addEventListener("click", () => {
     const timestamp = new Date();
+    moment.locale('ja');
     const newPost = {
         userIcon: "./images/user.jpeg",
         userName: username,
