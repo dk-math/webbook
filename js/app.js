@@ -14,12 +14,14 @@ for(let i = 0; i < tabs.length; i++) {
 }
 
 function tabSwitch(){
-    document.getElementsByClassName("active")[0].classList.remove("active");
-    this.classList.add("active");
+    document.getElementsByClassName("active-item")[0].classList.remove("active-item");
+    this.classList.add("active-item");
     const arrayTabs = Array.prototype.slice.call(tabs);
     const index = arrayTabs.indexOf(this);
-    document.getElementsByClassName("is-show")[0].classList.remove('is-show');
-    document.getElementsByClassName("tab-content")[index].classList.add('is-show');
+    document.getElementsByClassName("active-space")[0].classList.remove("active-space");
+    document.getElementsByClassName("header-space")[index].classList.add("active-space");
+    document.getElementsByClassName("is-show")[0].classList.remove("is-show");
+    document.getElementsByClassName("tab-content")[index].classList.add("is-show");
 };
 
 document.getElementById("post-btn").addEventListener("click", () => {

@@ -4,13 +4,20 @@ body {
 }
 
 header {
+    position: fixed;
+    display: block;
+    top: 0;
     padding: 2.5em 0 0 0;
-    font-size: 1.2em;
+    height: 8.5em;
     width: 100%;
     background-color: #fdf5e6;
+    opacity: 0.9;
     z-index: 100;
+}
+
+#header-upper {
+    font-size: 1.2em;
     display: flex;
-    position: fixed;
     justify-content: space-between;
     font-weight: bold;
 }
@@ -20,6 +27,11 @@ header {
     padding: 0 0 0 0;
     display: flex;
     list-style: none;
+}
+
+.tabs .active-item {
+    text-decoration: underline;
+    text-underline-offset: 0.5em;
 }
 
 .tab-item {
@@ -36,29 +48,6 @@ header {
 
 .tab-item:hover {
     background-color: #f3e2b6ff;
-}
-
-.tabs .active {
-    text-decoration: underline;
-    text-underline-offset: 0.5em;
-}
-
-.tab-content {
-    display: none;
-    clear: both;
-    overflow: hidden;
-}
-
-.some-space {
-    position: fixed;
-    height:11em;
-    width: 100%;
-    z-index: 99;
-    background-color: #fdf5e6;
-}
-
-.is-show {
-  display: block;
 }
 
 #site-logo {
@@ -82,9 +71,29 @@ header {
     cursor : pointer;
 }
 
+.header-space {
+    display: none;
+}
+
+.active-space {
+    display: block;
+}
+
+.tab-content {
+    display: none;
+    clear: both;
+    overflow: hidden;
+}
+
+.is-show {
+  display: block;
+}
+
+#container {
+    margin: 12em 0 0 0;
+}
+
 #top-message {
-    height: 34em;
-    margin: 11em 0 0 0;
     display: flex;
     justify-content: space-between;
     background-color: #0c1d49ff;
@@ -106,7 +115,7 @@ header {
 }
 
 #post-btn {
-    margin: 6.5em 4em 0 0;
+    margin: 2.5em 4em 0 0;
     padding: 0 0 0 0.5em;
     position:fixed;
     right:0%;
@@ -136,8 +145,7 @@ header {
 } */
 
 #all-tweet {
-    margin-top: 11em;
-    margin: 11em 3em 0 3em;
+    margin: 0 3em 0 3em;
     /* justify-content: center; */
     flex-direction: row;
     flex-wrap: wrap;
@@ -146,7 +154,7 @@ header {
 }
 
 .card {
-    width: 18%;
+    width: 17.6%;
     height: 25%;
     margin: 1em 1em;
     padding: 1em 2em;
