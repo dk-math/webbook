@@ -25,6 +25,7 @@ function tabSwitch(){
 };
 
 document.getElementById("post-btn").addEventListener("click", () => {
+    const timestamp = new Date();
     const newPost = {
         // userIcon: "images/post.jpg",
         userName: username,
@@ -32,7 +33,7 @@ document.getElementById("post-btn").addEventListener("click", () => {
         // bookImg: "images/post.jpg",
         // goodIcon: "images/post.jpg",
         goodCount: 0,
-        time: "posted " + moment(Date()).fromNow(),
+        time: moment(timestamp).fromNow(),
     };
     bookSite.cardList.push(newPost);
     postCard(bookSite.cardList.length - 1);
@@ -47,37 +48,54 @@ function postCard(index) {
     const cardEl = document.createElement("div");
     cardEl.className = "card";
 
+    const userEl = document.createElement("div");
+    userEl.className ="card-user";
+
     // const userIconEl = document.createElement("img");
-    // userIconEl.className = "user-icon"
+    // userIconEl.className = "card-user-icon"
     // userIconEl.src = card.image;
-    // cardEl.prepend(userIconEl);
+    // userEl.append(userIconEl)
 
     const userNameEl = document.createElement("div");
-    userNameEl.className = "user-name";
+    userNameEl.className = "card-username";
     userNameEl.innerHTML = username;
-    cardEl.prepend(userNameEl);
+    userEl.append(userNameEl);
+    cardEl.append(userEl);
+
+    const bookEl = document.createElement("div");
+    bookEl.className = "card-book";
 
     const bookTitleEl = document.createElement("div");
-    bookTitleEl.className = "book-title";
-    cardEl.prepend(bookTitleEl);
+    bookTitleEl.className = "card-book-title";
+    bookEl.append(bookTitleEl);
 
     // const bookImgEl = document.createElement("img");
-    // bookImgEl.className = "book-image"
+    // bookImgEl.className = "card-book-image"
     // bookImgEl.src = card.image;
-    // cardEl.prepend(bookImgEl);
+    // bookEl.append(bookImgEl);
+    cardEl.append(bookEl);
+
+    const underEl = document.createElement("div");
+    underEl.className = "card-under";
+
+    const goodEl = document.createElement("div");
+    goodEl.className = "card-good";
 
     // const goodIconEl = document.createElement("img");
-    // goodIconEl.className = "good-icon"
+    // goodIconEl.className = "card-good-icon"
     // goodIconEl.src = card.image;
-    // cardEl.prepend(goodIconEl);
+    // goodEl.append(goodIconEl);
 
     const goodCountEl = document.createElement("div");
     goodCountEl.className = "good-count";
-    cardEl.prepend(goodCountEl);
+    goodEl.append(goodCountEl);
+    underEl.append(goodEl);
 
     const timeEl = document.createElement("div");
     timeEl.className = "time";
-    cardEl.prepend(timeEl);
+    timeEl.innerHTML = card.time;
+    underEl.append(timeEl);
+    cardEl.append(underEl);
 
     containerEl.prepend(cardEl);
 }
