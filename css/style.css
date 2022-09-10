@@ -162,3 +162,32 @@ header {
     border-radius: 1em;
     box-shadow: 0.05em 0.05em grey;
   }
+
+  .card-user {
+    display: flex;
+  }
+
+  .card-user-icon {
+    height: 1.5em;
+    margin-right: 0.2em;
+  }
+
+  .card-book {
+    margin-top: 0.3em;
+    height: 75%;
+    border-bottom: solid;
+  }
+
+  .card-book-image-block {
+    text-align: center;
+  }
+
+  .card-book-image {
+    height: 6em;
+    margin-top: 1em;
+  }
+
+  .card-under {
+    display: flex;
+    justify-content: space-between;
+  }

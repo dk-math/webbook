@@ -27,10 +27,10 @@ function tabSwitch(){
 document.getElementById("post-btn").addEventListener("click", () => {
     const timestamp = new Date();
     const newPost = {
-        // userIcon: "images/post.jpg",
+        userIcon: "./images/user.jpeg",
         userName: username,
-        bookTitle: "",
-        // bookImg: "images/post.jpg",
+        bookTitle: "人は話し方が9割",
+        bookImg: "./images/book.jpg",
         // goodIcon: "images/post.jpg",
         goodCount: 0,
         time: moment(timestamp).fromNow(),
@@ -51,10 +51,10 @@ function postCard(index) {
     const userEl = document.createElement("div");
     userEl.className ="card-user";
 
-    // const userIconEl = document.createElement("img");
-    // userIconEl.className = "card-user-icon"
-    // userIconEl.src = card.image;
-    // userEl.append(userIconEl)
+    const userIconEl = document.createElement("img");
+    userIconEl.className = "card-user-icon"
+    userIconEl.src = card.userIcon;
+    userEl.append(userIconEl)
 
     const userNameEl = document.createElement("div");
     userNameEl.className = "card-username";
@@ -67,12 +67,16 @@ function postCard(index) {
 
     const bookTitleEl = document.createElement("div");
     bookTitleEl.className = "card-book-title";
+    bookTitleEl.innerHTML = card.bookTitle;
     bookEl.append(bookTitleEl);
 
-    // const bookImgEl = document.createElement("img");
-    // bookImgEl.className = "card-book-image"
-    // bookImgEl.src = card.image;
-    // bookEl.append(bookImgEl);
+    const bookImgEl = document.createElement("img");
+    bookImgEl.className = "card-book-image"
+    bookImgEl.src = card.bookImg;
+    const bookImgBlockEl = document.createElement("div");
+    bookImgBlockEl.className = "card-book-image-block";
+    bookImgBlockEl.append(bookImgEl);
+    bookEl.append(bookImgBlockEl);
     cardEl.append(bookEl);
 
     const underEl = document.createElement("div");
