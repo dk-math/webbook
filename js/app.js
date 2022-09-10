@@ -32,6 +32,7 @@ document.getElementById("post-btn").addEventListener("click", () => {
         userName: username,
         bookTitle: "人は話し方が9割",
         bookImg: "./images/book.jpg",
+        evalutaion: 5,
         // goodIcon: "images/post.jpg",
         goodCount: 0,
         time: moment(timestamp).fromNow(),
@@ -58,8 +59,8 @@ function postCard(index) {
     userEl.append(userIconEl)
 
     const userNameEl = document.createElement("div");
-    userNameEl.className = "card-username";
-    userNameEl.innerHTML = username;
+    userNameEl.className = "card-user-name";
+    userNameEl.innerHTML = card.userName;
     userEl.append(userNameEl);
     cardEl.append(userEl);
 
@@ -79,6 +80,20 @@ function postCard(index) {
     bookImgBlockEl.append(bookImgEl);
     bookEl.append(bookImgBlockEl);
     cardEl.append(bookEl);
+
+    const bookEvalEl = document.createElement("div");
+    bookEvalEl.className = "card-book-evaluation";
+
+    const bookEvalIconEl = document.createElement("img");
+    bookEvalIconEl.className = "card-book-evaluation-icon";
+    bookEvalIconEl.src = "./images/star.png";
+    bookEvalEl.append(bookEvalIconEl);
+
+    const bookEvalPointEl = document.createElement("div");
+    bookEvalPointEl.className = "card-book-evaluation-point";
+    bookEvalPointEl.innerHTML = card.evalutaion;
+    bookEvalEl.append(bookEvalPointEl);
+    bookEl.append(bookEvalEl);
 
     const underEl = document.createElement("div");
     underEl.className = "card-under";

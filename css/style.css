@@ -173,6 +173,12 @@ header {
     margin-right: 0.2em;
   }
 
+  .card-user-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   .card-book {
     margin-top: 0.3em;
     height: 75%;
@@ -193,6 +199,19 @@ header {
   .card-book-image {
     height: 6em;
     margin-top: 1em;
+  }
+
+  .card-book-evaluation {
+    display: flex;
+    align-items:center;
+    position: relative;
+    top: -8%;
+    left: 86%;
+  }
+
+  .card-book-evaluation-icon {
+    height: 1.2em;
+    margin-right: 0.3em;
   }
 
   .card-under {
