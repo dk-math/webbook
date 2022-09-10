@@ -146,7 +146,7 @@ header {
 
 #all-tweet {
     margin: 0 3em 0 3em;
-    /* justify-content: center; */
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: space-between;
@@ -154,10 +154,10 @@ header {
 }
 
 .card {
-    width: 17.6%;
+    width: 20%;
     height: 13em;
-    margin: 1em 1em;
-    padding: 1em 2em;
+    margin: 0em 1em 1em 1em;
+    padding: 1em 1em;
     background-color: white;
     color: #666666;
     border-radius: 1em;
@@ -178,6 +178,12 @@ header {
     height: 75%;
     border-bottom: solid;
     border-color: #666666;
+  }
+
+  .card-book-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .card-book-image-block {
