@@ -8,9 +8,9 @@ window.addEventListener("load", () => {
     localStorage.setItem("username", username);
     }
 
-const tabs = document.getElementsByClassName('tab-item');
+const tabs = document.getElementsByClassName("tab-item");
 for(let i = 0; i < tabs.length; i++) {
-    tabs[i].addEventListener('click', tabSwitch, false);
+    tabs[i].addEventListener("click", tabSwitch, false);
 }
 
 function tabSwitch(){
@@ -23,6 +23,14 @@ function tabSwitch(){
     document.getElementsByClassName("is-show")[0].classList.remove("is-show");
     document.getElementsByClassName("tab-content")[index].classList.add("is-show");
 };
+
+function goodSwitch() {
+    if (Array.prototype.slice.call(this.classList).indexOf("good-active") >= 0) {
+        this.classList.remove("good-active");
+    } else {
+        this.classList.add("good-active");
+    }
+}
 
 const modal = document.getElementById('demo-modal');
 const btn = document.getElementById('post-modal-btn');
@@ -126,14 +134,9 @@ function postCard(index) {
     goodEl.className = "card-good";
 
     const goodIconEl = document.createElement("i");
-    goodIconEl.className = "fa-regular fa-thumbs-up"
-    // goodIconEl.src = card.goodIcon;
+    goodIconEl.className = "fa-regular fa-thumbs-up";
+    const goods = document.getElementsByClassName("fa-thumbs-up");
     goodEl.append(goodIconEl);
-    // const goodIconEl = document.createElement("img");
-    // goodIconEl.className = "card-good-icon"
-    // goodIconEl.src = card.goodIcon;
-    // goodEl.append(goodIconEl);
-
 
     const goodCountEl = document.createElement("div");
     goodCountEl.className = "good-count";
@@ -148,6 +151,10 @@ function postCard(index) {
     cardEl.append(underEl);
 
     containerEl.prepend(cardEl);
+
+    for(let i = 0; i < goods.length; i++) {
+        goods[i].addEventListener("click", goodSwitch, false);
+    }
 }
 
 })
