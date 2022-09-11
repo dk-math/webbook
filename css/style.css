@@ -1,3 +1,7 @@
+/* *{
+    outline: 2px red solid;
+} */
+
 body {
     margin: 0 0 0 0;
     background-color: #fdf5e6;
@@ -114,7 +118,7 @@ header {
     height: 34em;
 }
 
-#post-btn {
+.post-btn {
     margin: 2.5em 4em 0 0;
     padding: 0 0 0 0.5em;
     position:fixed;
@@ -134,7 +138,7 @@ header {
     height: 0.8em;
 }
 
-#post-btn:hover {
+.post-btn:hover {
     background-color: #f3e2b6ff;
 }
 
@@ -222,10 +226,92 @@ header {
   .card-good-icon {
     height: 1.2em;
     margin-right: 0.3em;
-    /* display: inline-block; */
-    fill: red;
   }
 
-  /* .card-good-icon:hover {
-    fill: red;
-  } */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    animation-name: show;
+    animation-duration: 0.5s;
+  }
+  
+  .modal-content {
+    position: fixed;
+    background-color: #fdf5e6;
+    margin: 5% 5%;
+    padding: 0 3%;
+    border: 1px solid #888;
+    width: 84%;
+    height: 85%;
+    overflow: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 1em;
+  }
+  
+  @keyframes show {
+    0% {
+      display: none;
+      opacity: 0;
+    }
+    100% {
+      display: block;
+      opacity: 1;
+    }
+  }
+  
+  .modal-header {
+    position: fixed;
+    width: 84%;
+    height: 6em;
+    opacity: 0.9;
+    border-bottom: solid 1px #666666;
+    color: #0c1d49ff;
+    background-color: #fdf5e6;
+  }
+  
+  .modal-body {
+    padding: 9% 0;
+    height: 80%;
+  }
+
+  .modal-body form {
+    color: #666666;
+    font-weight: bold;
+  }
+
+  .form-input {
+    margin-bottom: 2em;
+  }
+  
+  .modal-footer {
+    position: fixed;
+    bottom: 6%;
+    /* margin: auto; */
+    height: 5em;
+    width: 84%;
+    border-top: solid 1px #666666;
+    background-color: #fdf5e6;
+    overflow: hidden;
+    opacity: 0.9;
+  }
+  
+  .close {
+    color: #666666;
+    position: relative;
+    top: 1em;
+    left: 99%;
+    font-size: 18px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #666666;
+    cursor: pointer;
+  }

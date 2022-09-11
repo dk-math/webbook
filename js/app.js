@@ -24,7 +24,7 @@ function tabSwitch(){
     document.getElementsByClassName("tab-content")[index].classList.add("is-show");
 };
 
-document.getElementById("post-btn").addEventListener("click", () => {
+document.getElementById("post-confirm-btn").addEventListener("click", () => {
     const timestamp = new Date();
     moment.locale('ja');
     const newPost = {
@@ -120,5 +120,28 @@ function postCard(index) {
 
     containerEl.prepend(cardEl);
 }
+
+const modal = document.getElementById('demo-modal');
+const btn = document.getElementById('post-modal-btn');
+const close = modal.getElementsByClassName('close')[0];
+
+// When the user clicks the button, open the modal.
+btn.onclick = function() {
+  modal.style.display = 'block';
+};
+
+// When the user clicks on 'X', close the modal
+close.onclick = function() {
+  modal.style.display = 'none';
+};
+
+// When the user clicks outside the modal -- close it.
+window.onclick = function(event) {
+  if (event.target == modal) {
+    // Which means he clicked somewhere in the modal (background area), but not target = modal-content
+    modal.style.display = 'none';
+  }
+};
+
 
 })

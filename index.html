@@ -29,8 +29,49 @@
             <div id="top-space" class="header-space active-space"></div>
 
             <div id="tweet-space" class="header-space">
-                <div id="post-btn">投稿する
+                <div id="post-modal-btn" class="post-btn">投稿する
                     <span><img id="post-image" src="images/post.png" alt="投稿画像"></span>
+                </div>
+                <div id="demo-modal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class='close'>X</span>
+                            <h2>本の口コミを投稿する</h2>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-input">
+                                    <p>本のタイトル</p>
+                                    <input type="text" name="book-title">
+                                </div>
+                                <div class="form-input">
+                                    <p>画像アップロード</p>
+                                    <input>
+                                </div>
+                                <div class="form-input">
+                                    <p>おすすめ度</p>
+                                    <input>
+                                </div>
+                                <div class="form-input">
+                                    <p>この本を一言で表現するなら</p>
+                                    <input>
+                                </div>
+                                <div class="form-input">
+                                    <p>本の感想</p>
+                                    <input>
+                                </div>
+                                <div class="form-input">
+                                    <p>あなたはどんな人？</p>
+                                    <input>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <div id="post-confirm-btn" class="post-btn">投稿する
+                                <span><img id="post-image" src="images/post.png" alt="投稿画像"></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
