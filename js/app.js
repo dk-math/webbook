@@ -57,7 +57,6 @@ document.getElementById("post-confirm-btn").addEventListener("click", () => {
         evalutaion: document.getElementById("book-evaluation").value,
         comment: document.getElementById("book-comment").value,
         thoughts: document.getElementById("book-thoughts").value,
-        goodIcon: "./images/good.svg",
         goodCount: 0,
         time: moment(timestamp).fromNow(),
     };
@@ -126,10 +125,15 @@ function postCard(index) {
     const goodEl = document.createElement("div");
     goodEl.className = "card-good";
 
-    const goodIconEl = document.createElement("img");
-    goodIconEl.className = "card-good-icon"
-    goodIconEl.src = card.goodIcon;
+    const goodIconEl = document.createElement("i");
+    goodIconEl.className = "fa-regular fa-thumbs-up"
+    // goodIconEl.src = card.goodIcon;
     goodEl.append(goodIconEl);
+    // const goodIconEl = document.createElement("img");
+    // goodIconEl.className = "card-good-icon"
+    // goodIconEl.src = card.goodIcon;
+    // goodEl.append(goodIconEl);
+
 
     const goodCountEl = document.createElement("div");
     goodCountEl.className = "good-count";
