@@ -52,9 +52,11 @@ document.getElementById("post-confirm-btn").addEventListener("click", () => {
     const newPost = {
         userIcon: "./images/user.jpeg",
         userName: username,
-        bookTitle: "人は話し方が9割",
+        bookTitle: document.getElementById("book-title").value,
         bookImg: "./images/book.jpg",
-        evalutaion: 5,
+        evalutaion: document.getElementById("book-evaluation").value,
+        comment: document.getElementById("book-comment").value,
+        thoughts: document.getElementById("book-thoughts").value,
         goodIcon: "./images/good.svg",
         goodCount: 0,
         time: moment(timestamp).fromNow(),
@@ -63,7 +65,7 @@ document.getElementById("post-confirm-btn").addEventListener("click", () => {
     postCard(bookSite.cardList.length - 1);
     modal.style.display = 'none';
 
-    // document.getElementById("form").reset();
+    document.getElementById("post-form").reset();
 });
 
 const containerEl = document.querySelector("#all-tweet"); 
