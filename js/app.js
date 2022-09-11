@@ -25,31 +25,32 @@ function tabSwitch(){
 };
 
 function goodSwitch() {
+    const goods = document.getElementsByClassName("fa-thumbs-up");
+    const arrayGoods = Array.prototype.slice.call(goods);
+    const index = arrayGoods.indexOf(this);
     if (Array.prototype.slice.call(this.classList).indexOf("good-active") >= 0) {
         this.classList.remove("good-active");
+        bookSite.cardList[index].goodCount --;
     } else {
         this.classList.add("good-active");
+        bookSite.cardList[index].goodCount ++;
     }
+    document.getElementsByClassName("good-count")[index].innerHTML = bookSite.cardList[index].goodCount;
 }
 
 const modal = document.getElementById('demo-modal');
 const btn = document.getElementById('post-modal-btn');
 const close = modal.getElementsByClassName('close')[0];
-
-// When the user clicks the button, open the modal.
 btn.onclick = function() {
   modal.style.display = 'block';
 };
 
-// When the user clicks on 'X', close the modal
 close.onclick = function() {
   modal.style.display = 'none';
 };
 
-// When the user clicks outside the modal -- close it.
 window.onclick = function(event) {
   if (event.target == modal) {
-    // Which means he clicked somewhere in the modal (background area), but not target = modal-content
     modal.style.display = 'none';
   }
 };
@@ -68,13 +69,14 @@ document.getElementById("post-confirm-btn").addEventListener("click", () => {
         goodCount: 0,
         time: moment(timestamp).fromNow(),
     };
-    bookSite.cardList.push(newPost);
+    bookSite.cardList.unshift(newPost);
     postCard(bookSite.cardList.length - 1);
     modal.style.display = 'none';
 
     document.getElementById("post-form").reset();
 });
 
+let goodNum = 0;
 const containerEl = document.querySelector("#all-tweet"); 
 function postCard(index) {
     const card = bookSite.cardList[index];
@@ -134,13 +136,13 @@ function postCard(index) {
     goodEl.className = "card-good";
 
     const goodIconEl = document.createElement("i");
-    goodIconEl.className = "fa-regular fa-thumbs-up";
-    const goods = document.getElementsByClassName("fa-thumbs-up");
+    goodIconEl.className = `fa-regular fa-thumbs-up ${goodNum}`;
+    goodNum ++;
     goodEl.append(goodIconEl);
 
     const goodCountEl = document.createElement("div");
     goodCountEl.className = "good-count";
-    goodCountEl.innerHTML = card.goodCount;
+    goodCountEl.innerHTML = 0;
     goodEl.append(goodCountEl);
     underEl.append(goodEl);
 
@@ -152,6 +154,7 @@ function postCard(index) {
 
     containerEl.prepend(cardEl);
 
+    const goods = document.getElementsByClassName("fa-thumbs-up");
     for(let i = 0; i < goods.length; i++) {
         goods[i].addEventListener("click", goodSwitch, false);
     }
