@@ -70,9 +70,8 @@ document.getElementById("post-confirm-btn").addEventListener("click", () => {
         time: moment(timestamp).fromNow(),
     };
     bookSite.cardList.unshift(newPost);
-    postCard(bookSite.cardList.length - 1);
+    postCard(0);
     modal.style.display = 'none';
-
     document.getElementById("post-form").reset();
 });
 
