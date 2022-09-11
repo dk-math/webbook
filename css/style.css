@@ -138,12 +138,6 @@ header {
     background-color: #f3e2b6ff;
 }
 
-/* #tweet-area {
-    justify-content: center;
-    margin: 11em auto;
-    display: table;
-} */
-
 #all-tweet {
     margin: 0 3em 0 3em;
     justify-content: center;
@@ -155,7 +149,7 @@ header {
 
 .card {
     width: 20%;
-    height: 13em;
+    height: 15em;
     margin: 0em 1em 1em 1em;
     padding: 1em 1em;
     background-color: white;
@@ -197,7 +191,7 @@ header {
   }
 
   .card-book-image {
-    height: 6em;
+    height: 8em;
     margin-top: 1em;
   }
 
@@ -205,7 +199,7 @@ header {
     display: flex;
     align-items:center;
     position: relative;
-    top: -8%;
+    top: -12%;
     left: 86%;
   }
 
@@ -217,4 +211,21 @@ header {
   .card-under {
     display: flex;
     justify-content: space-between;
+    margin-top: 0.5em;
   }
+
+  .card-good {
+    display: flex;
+    align-items:center;
+  }
+
+  .card-good-icon {
+    height: 1.2em;
+    margin-right: 0.3em;
+    /* display: inline-block; */
+    fill: red;
+  }
+
+  /* .card-good-icon:hover {
+    fill: red;
+  } */
