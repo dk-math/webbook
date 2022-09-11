@@ -295,18 +295,22 @@ header {
   }
   
   .modal-body {
-    padding-top: 7%;
+    padding-top: 8%;
     /* height: 80%; */
   }
 
-  /* .modal-body form {
+  .modal-body form {
     color: #666666;
     font-weight: bold;
   }
 
   .form-input {
     margin-bottom: 2em;
-  } */
+  }
+
+  .form-input p {
+    margin: 0 0;
+  }
   
   .modal-footer {
     /* position: fixed; */
