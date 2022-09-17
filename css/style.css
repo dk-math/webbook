@@ -313,6 +313,40 @@ header {
   .form-input p {
     margin: 0 0;
   }
+
+  #star0 {
+    display: none;
+  }
+
+  .rate-form {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .rate-form input[type=radio] {
+    display: none;
+  }
+
+  .rate-form label {
+    position: relative;
+    padding: 0 5px;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 35px;
+  }
+
+  .rate-form label:hover {
+    color: #ffcc00;
+  }
+
+  .rate-form label:hover ~ label {
+    color: #ffcc00;
+  }
+  
+  .rate-form input[type=radio]:checked ~ label {
+    color: #ffcc00;
+  }
   
   .modal-footer {
     width: 100%;
@@ -324,7 +358,6 @@ header {
 
   #post-confirm-btn {
     margin: 1em 0;
-    padding: 0 0 0 0.5em;
     left: 90%;
     width: 5.3em;
     border-radius: 4px;

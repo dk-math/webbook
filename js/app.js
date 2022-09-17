@@ -13,6 +13,11 @@ for(let i = 0; i < tabs.length; i++) {
     tabs[i].addEventListener("click", tabSwitch, false);
 }
 
+const stars = document.getElementsByClassName("star");
+for(let i = 0; i < stars.length; i++) {
+    stars[i].addEventListener("click", evaluateBook, false);
+}
+
 function tabSwitch(){
     document.getElementsByClassName("active-item")[0].classList.remove("active-item");
     this.classList.add("active-item");
@@ -36,6 +41,11 @@ function goodSwitch() {
         bookSite.cardList[index].goodCount ++;
     }
     document.getElementsByClassName("good-count")[index].innerHTML = bookSite.cardList[index].goodCount;
+}
+
+function evaluateBook() {
+    document.getElementsByClassName("active-star")[0].classList.remove("active-star");
+    this.classList.add("active-star");
 }
 
 const modal = document.getElementById('demo-modal');
@@ -63,7 +73,7 @@ document.getElementById("post-confirm-btn").addEventListener("click", () => {
         userName: username,
         bookTitle: document.getElementById("book-title").value,
         bookImg: "./images/book.jpg",
-        evalutaion: document.getElementById("book-evaluation").value,
+        evalutaion: document.getElementsByClassName("active-star")[0].value,
         comment: document.getElementById("book-comment").value,
         thoughts: document.getElementById("book-thoughts").value,
         goodCount: 0,

@@ -73,18 +73,30 @@
                 <span class='close'>X</span>
             </div>
             <div class="modal-body">
-                <form id="post-form">
+                <form id="post-form" action="index.html" method="post" enctype="multipart/form-data">
                     <div class="form-input">
                         <p>本のタイトル</p>
                         <input type="text" id="book-title" name="book-title">
                     </div>
                     <div class="form-input">
                         <p>画像アップロード</p>
-                        <input>
+                        <input type="file">
                     </div>
                     <div class="form-input">
                         <p>おすすめ度</p>
-                        <input type="text" id="book-evaluation" name="book-evaluation">
+                        <div class="rate-form">
+                            <input id="star5" type="radio" name="rate" value="5" class="star">
+                            <label for="star5">★</label>
+                            <input id="star4" type="radio" name="rate" value="4" class="star">
+                            <label for="star4">★</label>
+                            <input id="star3" type="radio" name="rate" value="3" class="star">
+                            <label for="star3">★</label>
+                            <input id="star2" type="radio" name="rate" value="2" class="star">
+                            <label for="star2">★</label>
+                            <input id="star1" type="radio" name="rate" value="1" class="star">
+                            <label for="star1">★</label>
+                            <input id="star0" type="radio" name="rate" value="0" class="active-star">
+                         </div>
                     </div>
                     <div class="form-input">
                         <p>この本を一言で表現するなら</p>
@@ -101,9 +113,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <div id="post-confirm-btn" class="post-btn">投稿する
-                    <span><img class="post-image" src="images/post-white.svg" alt="投稿画像"></span>
-                </div>
+                <button id="post-confirm-btn" type="submit">投稿する</button>
             </div>
         </div>
     </div>
