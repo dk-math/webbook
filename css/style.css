@@ -369,3 +369,14 @@ header {
     background-color: #0c1d49ff;
 }
   
+.input {
+  display: inline-block;
+  width: 80em;
+  max-width: 100%;
+  padding: 0.5em;
+  border: 1px solid #666666;
+  box-sizing: border-box;
+  background: white;
+  margin: 0.5em 0;
+}
+
