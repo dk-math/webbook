@@ -48,37 +48,37 @@ function evaluateBook() {
     this.classList.add("active-star");
 }
 
-const modal = document.getElementById('demo-modal');
-const btn = document.getElementById('post-modal-btn');
-const close = modal.getElementsByClassName('close')[0];
-btn.onclick = function() {
-    modal.style.display = 'block';
+const formModal = document.getElementById("form-modal");
+const formModalBtn = document.getElementById("form-modal-btn");
+const formClose = formModal.getElementsByClassName("form-close")[0];
+formModalBtn.onclick = function() {
+    formModal.style.display = "block";
 };
 
-close.onclick = function() {
-    modal.style.display = 'none';
+formClose.onclick = function() {
+    formModal.style.display = "none";
 };
 
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = 'none';
+  if (event.target == formModal) {
+    formModal.style.display = "none";
   }
 };
 
-const confirmModal = document.getElementById('demo-confirm-modal');
-const confirmBtn = document.getElementById('post-confirm-btn');
-const confirmCancel = confirmModal.getElementsByClassName('confirm-cancel')[0];
+const confirmModal = document.getElementById("demo-confirm-modal");
+const confirmBtn = document.getElementById("post-confirm-btn");
+const confirmCancel = confirmModal.getElementsByClassName("confirm-cancel")[0];
 confirmBtn.onclick = function() {
-    confirmModal.style.display = 'block';
+    confirmModal.style.display = "block";
 };
 
 confirmCancel.onclick = function() {
-    confirmModal.style.display = 'none';
+    confirmModal.style.display = "none";
 };
 
 document.getElementById("confirm-btn").addEventListener("click", () => {
     const timestamp = new Date();
-    moment.locale('ja');
+    moment.locale("ja");
     const newPost = {
         userIcon: "./images/user.jpeg",
         userName: username,
@@ -92,7 +92,7 @@ document.getElementById("confirm-btn").addEventListener("click", () => {
     };
     bookSite.cardList.unshift(newPost);
     postCard(0);
-    modal.style.display = 'none';
+    formModal.style.display = "none";
     confirmModal.style.display = "none";
     document.getElementById("post-form").reset();
 });

@@ -118,7 +118,7 @@ header {
     height: 34em;
 }
 
-#post-modal-btn {
+#form-modal-btn {
     margin: 2.5em 4em 0 0;
     padding: 0 0 0 0.5em;
     position:fixed;
@@ -239,6 +239,17 @@ header {
     color: #0c1d49ff;
   }
 
+  @keyframes show {
+    0% {
+      display: none;
+      opacity: 0;
+    }
+    100% {
+      display: block;
+      opacity: 1;
+    }
+  }
+
   .modal {
     display: none;
     position: fixed;
@@ -250,17 +261,6 @@ header {
     z-index: 99998;
     animation-name: show;
     animation-duration: 0.5s;
-  }
-
-  @keyframes show {
-    0% {
-      display: none;
-      opacity: 0;
-    }
-    100% {
-      display: block;
-      opacity: 1;
-    }
   }
   
   .modal-content {
@@ -276,8 +276,8 @@ header {
   }
   
   .modal-header {
-    position: fixed;
-    width: 85%;
+    width: 100%;
+    margin-bottom: 1.5%;
     display: flex;
     justify-content: space-between;
     opacity: 0.9;
@@ -286,19 +286,15 @@ header {
     border-bottom: solid 1px #666666;
   }
 
-  .close {
+  .form-close {
     margin-top: 1em;
     font-size: 18px;
   }
   
-  .close:hover,
-  .close:focus {
+  .form-close:hover,
+  .form-close:focus {
     color: #666666;
     cursor: pointer;
-  }
-  
-  .modal-body {
-    padding-top: 8%;
   }
 
   .modal-body form {
@@ -392,7 +388,6 @@ header {
   z-index: 99999;
   animation-name: show;
   animation-duration: 0.5s;
-  justify-content: space-around;
 }
 
 .confirm-modal-content {
@@ -405,7 +400,9 @@ header {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   overflow: scroll;
   border-radius: 0.5em;
-
+  display:flex;
+  flex-flow: column;
+  justify-content:space-between;
 }
 
 .confirm-modal-header {
@@ -423,11 +420,7 @@ header {
 }
 
 .confirm-modal-body {
-  margin-top: 8%;
-  margin-bottom: 8%;
-  padding-top: 3%;
   font-size: 1.2em;
-  height: 35%;
   align-items: center;
   color: #666666;
 }
@@ -437,6 +430,7 @@ header {
   justify-content: flex-end;
   border-top: solid 1px #666666;
   padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 .confirm-cancel {
