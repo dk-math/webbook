@@ -166,6 +166,8 @@ function postCard(index) {
     goodCountEl.innerHTML = 0;
     goodEl.append(goodCountEl);
     underEl.append(goodEl);
+    const goods = document.getElementsByClassName("fa-thumbs-up");
+    goods[goods.length - 1].addEventListener("click", goodSwitch, false);
 
     const timeEl = document.createElement("div");
     timeEl.className = "time";
@@ -174,11 +176,6 @@ function postCard(index) {
     cardEl.append(underEl);
 
     containerEl.prepend(cardEl);
-
-    const goods = document.getElementsByClassName("fa-thumbs-up");
-    for(let i = 0; i < goods.length; i++) {
-        goods[i].addEventListener("click", goodSwitch, false);
-    }
 }
 
 })
