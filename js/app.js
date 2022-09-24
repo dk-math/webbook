@@ -95,6 +95,7 @@ document.getElementById("confirm-btn").addEventListener("click", () => {
     formModal.style.display = "none";
     confirmModal.style.display = "none";
     document.getElementById("post-form").reset();
+    return false;
 });
 
 let goodNum = 0;
