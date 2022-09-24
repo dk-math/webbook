@@ -1,12 +1,12 @@
 const chai = require("chai");
-const assert = chai.assert;
+const expect = chai.expect;
 
 const myFunc = function(a, b){
     return a+b;
 };
 
-describe('テストのタイトル', function () {
-    it('myFuncのテスト', function() {
-      assert.strictEqual(myFunc(1, 2), 3);
+describe("good", () => {
+    it("When click, add good counts", () => {
+      expect(myFunc(1, 2)).to.equal(1);
     });
   });
