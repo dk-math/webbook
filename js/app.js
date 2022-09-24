@@ -86,7 +86,6 @@ document.getElementById("confirm-btn").addEventListener("click", () => {
         bookImg: "./images/book.jpg",
         evalutaion: document.getElementsByClassName("active-star")[0].value,
         comment: document.getElementById("book-comment").value,
-        thoughts: document.getElementById("book-thoughts").value,
         goodCount: 0,
         time: moment(timestamp).fromNow(),
     };

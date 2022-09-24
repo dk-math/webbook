@@ -68,18 +68,20 @@
     <div id="form-modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>本の口コミを投稿する</h2>
+                <h2>本のつぶやきを投稿する</h2>
                 <span class="form-close">X</span>
             </div>
             <form id="post-form" action="index.html" method="post" enctype="multipart/form-data">
                 <div class="modal-body">
-                    <div class="form-input">
-                        <p>本のタイトル</p>
-                        <input type="text" id="book-title" size="15em" name="book-title" class="input">
-                    </div>
-                    <div class="form-input">
-                        <p>画像アップロード</p>
-                        <input type="file">
+                    <div id="book-information">
+                        <div class="form-input">
+                            <p>本のタイトル</p>
+                            <input type="text" id="book-title" size="15em" name="book-title" class="input">
+                        </div>
+                        <div class="form-input">
+                            <p>画像アップロード</p>
+                            <input type="file">
+                        </div>
                     </div>
                     <div class="form-input">
                         <p>おすすめ度</p>
@@ -98,17 +100,9 @@
                          </div>
                     </div>
                     <div class="form-input">
-                        <p>この本を一言で表現するなら</p>
-                        <input type="text" id="book-comment" name="book-comment" class="input">
+                        <p>この本のつぶやき</p>
+                        <textarea  rows="3" cols="60" id="book-comment" name="book-comment" class="input"></textarea>
                     </div>
-                    <div class="form-input">
-                        <p>その他：本の感想など</p>
-                        <textarea id="book-thoughts" row="20" cols="60" name="book-thoughts" class="input"></textarea>
-                    </div>
-                    <!-- <div class="form-input">
-                        <p>あなたはどんな人？</p>
-                        <input>
-                    </div> -->
                 </div>
                 <div class="modal-footer">
                     <button type="button" id="post-confirm-btn">投稿する</button>
