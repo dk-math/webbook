@@ -31,6 +31,10 @@ class Modal {
         };
     }
 
+    closeFormModal() {
+        this.formModal.style.display = "none";
+    }
+
     setConfirmModalBtnEvent() {
         const self = this;
         self.confirmBtn.onclick = function() {
@@ -43,6 +47,10 @@ class Modal {
         self.confirmCancel.onclick = function() {
             self.confirmModal.style.display = "none";
         };
+    }
+
+    closeConfirmModal() {
+        this.confirmModal.style.display = "none";
     }
 }
 

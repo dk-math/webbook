@@ -3,9 +3,25 @@ class Tweet {
         this.goodNum = 0;
     }
 
-    postCard(index) {
+    generateTweet(username) {
+        const timestamp = new Date();
+        moment.locale("ja");
+        const newPost = {
+            userIcon: "./images/user.jpeg",
+            userName: username,
+            bookTitle: document.getElementById("book-title").value,
+            bookImg: "./images/book.jpg",
+            evalutaion: document.getElementsByClassName("active-star")[0].value,
+            comment: document.getElementById("book-comment").value,
+            goodCount: 0,
+            time: moment(timestamp).fromNow(),
+        };
+        return newPost;
+    }
+
+    postTweet(index) {
         const containerEl = document.querySelector("#all-tweet"); 
-        const card = bookSite.cardList[index];
+        const card = bookSite.tweetList[index];
 
         const cardEl = document.createElement("div");
         cardEl.className = "card";
@@ -94,7 +110,7 @@ class Tweet {
         }
     }
 
-    ResetBookEvaluation() {
+    resetBookEvaluation() {
         document.getElementsByClassName("active-star")[0].classList.remove("active-star");
         const zeroStarEl = document.getElementById("star0");
         zeroStarEl.classList.add("active-star");
