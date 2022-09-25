@@ -15,8 +15,7 @@ class Tab {
                 document.getElementsByClassName("header-space")[index].classList.add("active-space");
                 document.getElementsByClassName("is-show")[0].classList.remove("is-show");
                 document.getElementsByClassName("tab-content")[index].classList.add("is-show");
-            },
-            false);
+            }, false);
         }
     }
 }
