@@ -3,7 +3,7 @@ class Tab {
         this.tabs = document.getElementsByClassName("tab-item");
     }
 
-    setSwitchTabs() {
+    setSwitchTabsEvent() {
         const self = this;
         for(let i = 0; i < self.tabs.length; i++) {
             self.tabs[i].addEventListener("click", function() {

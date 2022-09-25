@@ -12,7 +12,7 @@ window.addEventListener("load", () => {
     const modal = new Modal();
     const tweet = new Tweet();
 
-    tab.setSwitchTabs();
+    tab.setSwitchTabsEvent();
     modal.setFormModalOpenBtnEvent();
     modal.setFormModalCloseBtnEvent();
     modal.setForModalCloseOutsideEvent();
