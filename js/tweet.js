@@ -84,6 +84,16 @@ class Tweet {
         goods[0].addEventListener("click", this.addGoodCount, false);
     }
 
+    setEvaluateBookEvent() {
+        const stars = document.getElementsByClassName("star");
+        for(let i = 0; i < stars.length; i++) {
+            stars[i].addEventListener("click", function() {
+                document.getElementsByClassName("active-star")[0].classList.remove("active-star");
+                this.classList.add("active-star");
+            }, false);
+        }
+    }
+
     addGoodCount() {
         const goods = document.getElementsByClassName("fa-thumbs-up");
         const arrayGoods = Array.prototype.slice.call(goods);
