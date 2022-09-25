@@ -37,6 +37,7 @@ window.addEventListener("load", () => {
             };
             bookSite.cardList.unshift(newPost);
             tweet.postCard(0);
+            tweet.ResetBookEvaluation();
             modal.formModal.style.display = "none";
             modal.confirmModal.style.display = "none";
             document.getElementById("post-form").reset();

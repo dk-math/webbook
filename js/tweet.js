@@ -94,6 +94,12 @@ class Tweet {
         }
     }
 
+    ResetBookEvaluation() {
+        document.getElementsByClassName("active-star")[0].classList.remove("active-star");
+        const zeroStarEl = document.getElementById("star0");
+        zeroStarEl.classList.add("active-star");
+    }
+
     addGoodCount() {
         const goods = document.getElementsByClassName("fa-thumbs-up");
         const arrayGoods = Array.prototype.slice.call(goods);
