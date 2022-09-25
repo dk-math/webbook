@@ -1,16 +1,16 @@
 window.addEventListener("load", () => {
-    const tab = new Tab();
-    const modal = new Modal();
-    const tweet = new Tweet();
-
-    window.bookSite = {};
-    bookSite.cardList = [];
-
     let username = localStorage.getItem("username");
     if (!username) {
         username = window.prompt("What is your name?");
         localStorage.setItem("username", username);
     }
+
+    window.bookSite = {};
+    bookSite.cardList = [];
+
+    const tab = new Tab();
+    const modal = new Modal();
+    const tweet = new Tweet();
 
     tab.setSwitchTabs();
     modal.setFormModalOpenBtnEvent();
