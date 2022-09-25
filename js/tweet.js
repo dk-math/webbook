@@ -6,7 +6,7 @@ class Tweet {
     generateTweet(username) {
         const timestamp = new Date();
         moment.locale("ja");
-        const newPost = {
+        const newTweet = {
             userIcon: "./images/user.jpeg",
             userName: username,
             bookTitle: document.getElementById("book-title").value,
@@ -16,7 +16,7 @@ class Tweet {
             goodCount: 0,
             time: moment(timestamp).fromNow(),
         };
-        return newPost;
+        return newTweet;
     }
 
     postTweet(index) {
@@ -95,9 +95,6 @@ class Tweet {
         cardEl.append(underEl);
 
         containerEl.prepend(cardEl);
-
-        const goods = document.getElementsByClassName("fa-thumbs-up");
-        goods[0].addEventListener("click", this.addGoodCount, false);
     }
 
     setEvaluateBookEvent() {
@@ -116,18 +113,21 @@ class Tweet {
         zeroStarEl.classList.add("active-star");
     }
 
-    addGoodCount() {
+    setAddGoodCountEvent() {
         const goods = document.getElementsByClassName("fa-thumbs-up");
-        const arrayGoods = Array.prototype.slice.call(goods);
-        const index = arrayGoods.indexOf(this);
-        if (Array.prototype.slice.call(this.classList).indexOf("good-active") >= 0) {
-            this.classList.remove("good-active");
-            bookSite.cardList[index].goodCount --;
-        } else {
-            this.classList.add("good-active");
-            bookSite.cardList[index].goodCount ++;
-        }
-        document.getElementsByClassName("good-count")[index].innerHTML = bookSite.cardList[index].goodCount;
+        goods[0].addEventListener("click", function() {
+            const goods = document.getElementsByClassName("fa-thumbs-up");
+            const arrayGoods = Array.prototype.slice.call(goods);
+            const index = arrayGoods.indexOf(this);
+            if (Array.prototype.slice.call(this.classList).indexOf("good-active") >= 0) {
+                this.classList.remove("good-active");
+                bookSite.tweetList[index].goodCount --;
+            } else {
+                this.classList.add("good-active");
+                bookSite.tweetList[index].goodCount ++;
+            }
+            document.getElementsByClassName("good-count")[index].innerHTML = bookSite.tweetList[index].goodCount;
+        }, false);
     }
 }
 

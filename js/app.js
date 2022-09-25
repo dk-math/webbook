@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
     tab.setSwitchTabsEvent();
     modal.setFormModalOpenBtnEvent();
     modal.setFormModalCloseBtnEvent();
-    modal.setForModalCloseOutsideEvent();
+    modal.setFormModalCloseOutsideEvent();
     modal.setConfirmModalBtnEvent();
     modal.setConfirmModalCancelBtnEvent();
     tweet.setEvaluateBookEvent();
@@ -26,6 +26,7 @@ window.addEventListener("load", () => {
             const newTweet = tweet.generateTweet(username);
             bookSite.tweetList.unshift(newTweet);
             tweet.postTweet(0);
+            tweet.setAddGoodCountEvent();
             tweet.resetBookEvaluation();
             modal.closeFormModal();
             modal.closeConfirmModal();

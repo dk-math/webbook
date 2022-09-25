@@ -22,7 +22,7 @@ class Modal {
         };
     }
 
-    setForModalCloseOutsideEvent() {
+    setFormModalCloseOutsideEvent() {
         const self = this;
         window.onclick = function(event) {
             if (event.target == self.formModal) {
