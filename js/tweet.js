@@ -23,7 +23,7 @@ class Tweet {
         const containerEl = document.querySelector("#all-tweet"); 
         const card = bookSite.tweetList[index];
 
-        const cardEl = document.createElement("div");
+        const cardEl = document.createElement("li");
         cardEl.className = "card";
 
         const userEl = document.createElement("div");
