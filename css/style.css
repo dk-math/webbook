@@ -190,14 +190,17 @@ header {
 
   .card-book {
     border-bottom: solid;
-    border-color: #666666;
+    border-color: grey;
   }
 
   .card-book-title {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    margin-top: 5px;
+    margin-bottom: 5px;
     margin-left: 10px;
+    font-weight: bold;
   }
 
   .card-book-image-block {
@@ -206,12 +209,12 @@ header {
 
   .card-book-image {
     height: 10em;
-    margin-top: 5px;
   }
 
   .card-book-evaluation {
     display: flex;
     align-items:center;
+    padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 10px;
     display: flex;
