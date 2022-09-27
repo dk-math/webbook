@@ -3,7 +3,7 @@
 } */
 
 body {
-    margin: 0 0;
+    margin: 0 auto;
     background-color: #fdf5e6;
     box-sizing: border-box;
 }
@@ -12,8 +12,8 @@ header {
     position: fixed;
     display: block;
     top: 0;
-    padding: 2.5em 0 0 0;
-    height: 8.5em;
+    padding: 20px 0 0 0;
+    height: 170px;
     width: 100%;
     background-color: #fdf5e6;
     opacity: 0.9;
@@ -44,7 +44,7 @@ header {
 
 .tab-item {
     border-radius: 4px;
-    margin: 0 2em 0 2em;
+    margin: 0 40px;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -58,7 +58,7 @@ header {
 }
 
 #site-logo {
-    padding: 0.2em 0.2em;
+    padding: 4px 4px;
     border-style: solid;
     border-width: 4px;
     border-color: #0c1d49ff;
@@ -81,7 +81,8 @@ header {
 }
 
 .active-space {
-    display: block;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .tab-content {
@@ -95,7 +96,7 @@ header {
 }
 
 #container {
-    margin: 12em 0 0 0;
+    margin: 190px 0 0 0;
 }
 
 #top-message {
@@ -106,7 +107,7 @@ header {
 
 #top-left {
     color: #ffffff;
-    padding: 0 0 0 5em;
+    padding-left: 64px;
     font-weight: bold;
 }
 
@@ -120,13 +121,11 @@ header {
 }
 
 #form-modal-btn {
-    margin-top: 2.5em;
+    margin-top: 50px;
     margin-right: 64px;
-    padding: 0 0 0 0.5em;
-    position:fixed;
-    right:0%;
+    padding-left: 8px;
     vertical-align: middle;
-    width: 5.3em;
+    /* width: 80px; */
     border-radius: 4px;
     font-size: 1.2em;
     font-weight: bold;
@@ -136,7 +135,7 @@ header {
 }
 
 .post-image {
-    margin: 0.15em 0 0 -0.2em;
+    margin: 1px 1px 0 -4px;
     height: 0.8em;
 }
 
@@ -179,7 +178,7 @@ header {
 
   .card-user-icon {
     height: 1.5em;
-    margin-right: 0.2em;
+    margin-right: 4px;
   }
 
   .card-user-name {
